@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dkshowmaker.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":280,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本教程详细介绍了在 Linux 环境(Centos7 和 Ubuntu 22.04)下，如何通过二进制包手动安装 MySQ 5.7.44。">
+    <meta name="description" content="本教程详细介绍了在 Linux 环境(Centos7(麒麟V10服务器版)|Ubuntu 22.04(麒麟V10客户版))下，如何通过二进制包手动安装 MySQ 5.7.44。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux MySQL安装教程">
 <meta property="og:url" content="https://dkshowmaker.github.io/2026/02/26/Linux-MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="DKShowMaker Blog">
-<meta property="og:description" content="本教程详细介绍了在 Linux 环境(Centos7 和 Ubuntu 22.04)下，如何通过二进制包手动安装 MySQ 5.7.44。">
+<meta property="og:description" content="本教程详细介绍了在 Linux 环境(Centos7(麒麟V10服务器版)|Ubuntu 22.04(麒麟V10客户版))下，如何通过二进制包手动安装 MySQ 5.7.44。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-02-26T14:55:08.000Z">
-<meta property="article:modified_time" content="2026-02-26T15:43:57.062Z">
+<meta property="article:modified_time" content="2026-02-27T05:57:30.245Z">
 <meta property="article:author" content="DKShowMaker">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="MySQL">
@@ -160,7 +160,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL-5-7-%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%80%9A%E7%94%A8%E7%89%88%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97"><span class="nav-text">MySQL 5.7 二进制通用版安装指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8C-%E5%BF%AB%E9%80%9F%E4%BF%A1%E6%81%AF%E9%80%9F%E6%9F%A5"><span class="nav-text">📌 快速信息速查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-text">1. 准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">1.1 下载安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E6%B8%85%E7%90%86%E7%8E%AF%E5%A2%83"><span class="nav-text">1.2 清理环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E6%A3%80%E6%9F%A5%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8"><span class="nav-text">1.3 检查端口占用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-text">2. 安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">2.1 解压安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%A3%80%E6%9F%A5%E7%B3%BB%E7%BB%9F%E4%BE%9D%E8%B5%96"><span class="nav-text">2.2 检查系统依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%88%9B%E5%BB%BA%E8%BF%90%E8%A1%8C%E7%94%A8%E6%88%B7"><span class="nav-text">2.3 创建运行用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">2.4 创建配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E5%90%AF%E5%8A%A8"><span class="nav-text">3. 初始化与启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">3.1 初始化数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%8E%B7%E5%8F%96%E5%88%9D%E5%A7%8B%E5%AF%86%E7%A0%81"><span class="nav-text">3.2 获取初始密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="nav-text">3.3 启动服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E9%A6%96%E6%AC%A1%E7%99%BB%E5%BD%95%E4%B8%8E%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9"><span class="nav-text">4. 首次登录与密码修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">4.1 登录数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E4%BF%AE%E6%94%B9-root-%E5%AF%86%E7%A0%81"><span class="nav-text">4.2 修改 root 密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%A1-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">💡 注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E7%AD%96%E7%95%A5%E6%8A%A5%E9%94%99"><span class="nav-text">密码策略报错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%AE%9E%E4%BE%8B%E8%BF%90%E8%A1%8C"><span class="nav-text">多实例运行</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="nav-text">安装结果预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-text">1. 准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">1.1 下载安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E6%B8%85%E7%90%86%E7%8E%AF%E5%A2%83"><span class="nav-text">1.2 清理环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E6%A3%80%E6%9F%A5%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8"><span class="nav-text">1.3 检查端口占用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-text">2. 安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">2.1 解压安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%A3%80%E6%9F%A5%E7%B3%BB%E7%BB%9F%E4%BE%9D%E8%B5%96"><span class="nav-text">2.2 检查系统依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%88%9B%E5%BB%BA%E8%BF%90%E8%A1%8C%E7%94%A8%E6%88%B7"><span class="nav-text">2.3 创建运行用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">2.4 创建配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E5%90%AF%E5%8A%A8"><span class="nav-text">3. 初始化与启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">3.1 初始化数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%8E%B7%E5%8F%96%E5%88%9D%E5%A7%8B%E5%AF%86%E7%A0%81"><span class="nav-text">3.2 获取初始密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="nav-text">3.3 启动服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E9%A6%96%E6%AC%A1%E7%99%BB%E5%BD%95%E4%B8%8E%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9"><span class="nav-text">4. 首次登录与密码修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">4.1 登录数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E4%BF%AE%E6%94%B9-root-%E5%AF%86%E7%A0%81"><span class="nav-text">4.2 修改 root 密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E7%AD%96%E7%95%A5%E6%8A%A5%E9%94%99"><span class="nav-text">密码策略报错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%AE%9E%E4%BE%8B%E8%BF%90%E8%A1%8C"><span class="nav-text">多实例运行</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -173,17 +173,17 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -249,7 +249,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-26 23:43:57" itemprop="dateModified" datetime="2026-02-26T23:43:57+08:00">2026-02-26</time>
+      <time title="Modified: 2026-02-27 13:57:30" itemprop="dateModified" datetime="2026-02-27T13:57:30+08:00">2026-02-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -277,12 +277,11 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>本教程详细介绍了在 Linux 环境(Centos7 和 Ubuntu 22.04)下，如何通过二进制包手动安装 MySQ 5.7.44。</p>
+    <div class="post-body" itemprop="articleBody"><p>本教程详细介绍了在 Linux 环境(Centos7(麒麟V10服务器版)|Ubuntu 22.04(麒麟V10客户版))下，如何通过二进制包手动安装 MySQ 5.7.44。</p>
 <span id="more"></span>
 
-<h1 id="MySQL-5-7-二进制通用版安装指南"><a href="#MySQL-5-7-二进制通用版安装指南" class="headerlink" title="MySQL 5.7 二进制通用版安装指南"></a>MySQL 5.7 二进制通用版安装指南</h1><p>本教程详细说明了如何在 Linux 环境下通过二进制包手动安装 MySQL 5.7.44。</p>
 <hr>
-<h2 id="📌-快速信息速查"><a href="#📌-快速信息速查" class="headerlink" title="📌 快速信息速查"></a>📌 快速信息速查</h2><table>
+<h2 id="安装结果预览"><a href="#安装结果预览" class="headerlink" title="安装结果预览"></a>安装结果预览</h2><table>
 <thead>
 <tr>
 <th align="left">项目</th>
@@ -314,6 +313,7 @@
 <h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h2><h3 id="1-1-下载安装包"><a href="#1-1-下载安装包" class="headerlink" title="1.1 下载安装包"></a>1.1 下载安装包</h3><p>根据你的系统架构选择对应的安装包：</p>
 <ul>
 <li><strong>x86_64</strong>: <a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.44-linux-glibc2.12-x86_64.tar.gz">官方下载链接</a></li>
+<li><strong>aarch64 (ARM)</strong>: <a target="_blank" rel="noopener" href="https://obs.cn-north-4.myhuaweicloud.com/obs-mirror-ftp4/database/mysql-5.7.27-aarch64.tar.gz">华为镜像</a> (文件名为<code>.tar.gz</code>，但只是<code>tar</code>包未使用<code>gzip</code>压缩，使用<code>tar -xvf</code>解压)</li>
 <li><strong>aarch64 (ARM)</strong>: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1-Pnv5tYAAe6hDraMiLh1Gg?pwd=dwfj">百度网盘提取码: dwfj</a> (已修正压缩格式)</li>
 </ul>
 <h3 id="1-2-清理环境"><a href="#1-2-清理环境" class="headerlink" title="1.2 清理环境"></a>1.2 清理环境</h3><p>卸载系统中可能残留的旧版 MySQL 或 MariaDB。</p>
@@ -327,7 +327,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:3306</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="2-安装与配置"><a href="#2-安装与配置" class="headerlink" title="2. 安装与配置"></a>2. 安装与配置</h2><h3 id="2-1-解压安装包"><a href="#2-1-解压安装包" class="headerlink" title="2.1 解压安装包"></a>2.1 解压安装包</h3><p>建议安装到 <code>/opt</code> 目录下。</p>
+<h2 id="2-安装与配置"><a href="#2-安装与配置" class="headerlink" title="2. 安装与配置"></a>2. 安装与配置</h2><h3 id="2-1-解压安装包"><a href="#2-1-解压安装包" class="headerlink" title="2.1 解压安装包"></a>2.1 解压安装包</h3><p>建议安装到 <code>/opt</code> 目录下。请确保 <code>/opt/mysql</code> 目录不存在，否则 <code>mv</code> 命令会将其作为子目录移入。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压并重命名</span></span><br><span class="line">tar -zxvf mysql-5.7.44-linux-glibc2.12-x86_64.tar.gz</span><br><span class="line"><span class="built_in">mv</span> mysql-5.7.44-linux-glibc2.12-x86_64 /opt/mysql</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-2-检查系统依赖"><a href="#2-2-检查系统依赖" class="headerlink" title="2.2 检查系统依赖"></a>2.2 检查系统依赖</h3><p>MySQL 5.7 依赖 <code>libaio</code> 等底层库，执行以下命令检查：</p>
@@ -347,7 +347,7 @@
 <h3 id="3-2-获取初始密码"><a href="#3-2-获取初始密码" class="headerlink" title="3.2 获取初始密码"></a>3.2 获取初始密码</h3><p>初始化完成后，在错误日志中查找随机生成的临时密码：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&#x27;temporary password&#x27;</span> /opt/mysql/data/mysqld.err</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-3-启动服务"><a href="#3-3-启动服务" class="headerlink" title="3.3 启动服务"></a>3.3 启动服务</h3><p>使用 <code>mysqld_safe</code> 启动守护进程：</p>
+<h3 id="3-3-启动服务"><a href="#3-3-启动服务" class="headerlink" title="3.3 启动服务"></a>3.3 启动服务</h3><p>使用 <code>mysqld_safe</code> 启动守护进程,如果MySQL进程异常终止，该进程可以自动拉起MySQL：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/mysql/bin/mysqld_safe --defaults-file=/opt/mysql/conf/my.cnf --user=mysql &amp;</span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -358,7 +358,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;YourNewPassword!123&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="💡-注意事项"><a href="#💡-注意事项" class="headerlink" title="💡 注意事项"></a>💡 注意事项</h2><h3 id="密码策略报错"><a href="#密码策略报错" class="headerlink" title="密码策略报错"></a>密码策略报错</h3><p>如果遇到错误：<code>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</code></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><h3 id="密码策略报错"><a href="#密码策略报错" class="headerlink" title="密码策略报错"></a>密码策略报错</h3><p>如果遇到错误：<code>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</code></p>
 <ol>
 <li><strong>方案 A (推荐)</strong>：设置包含大小写、数字、特殊字符且长度超过 8 位的复杂密码。</li>
 <li><strong>方案 B (临时)</strong>：降低复杂度策略。<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> <span class="keyword">GLOBAL</span> validate_password_policy<span class="operator">=</span>LOW;</span><br><span class="line"><span class="keyword">SET</span> <span class="keyword">GLOBAL</span> validate_password_length<span class="operator">=</span><span class="number">6</span>;</span><br></pre></td></tr></table></figure></li>
@@ -409,6 +409,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2026/02/27/MySQL%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/" rel="next" title="MySQL安装脚本">
+                  MySQL安装脚本 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>

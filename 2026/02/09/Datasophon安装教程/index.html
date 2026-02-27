@@ -20,16 +20,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dkshowmaker.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":280,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="硬件环境   CPU 系统 IP HOST_NAME    arm64 麒麟V10客户端 192.168.0.84 ddp01   arm64 麒麟V10服务器端 192.168.0.90 ddp02   arm64 麒麟V10服务器端 192.168.0.91 ddp03    麒麟V10客户端适配Ubuntu系统命令，麒麟V10服务器端适配CentOS系统命令。  设置用户名1234567">
+    <meta name="description" content="本教程详细介绍了大数据管理平台Datasophon在aarch64架构芯片和国产操作系统麒麟V10客户端、服务器端上的安装过程。可以点击右上角获得项目更新。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Datasophon安装教程">
 <meta property="og:url" content="https://dkshowmaker.github.io/2026/02/09/Datasophon%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="DKShowMaker Blog">
-<meta property="og:description" content="硬件环境   CPU 系统 IP HOST_NAME    arm64 麒麟V10客户端 192.168.0.84 ddp01   arm64 麒麟V10服务器端 192.168.0.90 ddp02   arm64 麒麟V10服务器端 192.168.0.91 ddp03    麒麟V10客户端适配Ubuntu系统命令，麒麟V10服务器端适配CentOS系统命令。  设置用户名1234567">
+<meta property="og:description" content="本教程详细介绍了大数据管理平台Datasophon在aarch64架构芯片和国产操作系统麒麟V10客户端、服务器端上的安装过程。可以点击右上角获得项目更新。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-02-09T12:42:33.000Z">
-<meta property="article:modified_time" content="2026-02-25T13:43:50.006Z">
+<meta property="article:modified_time" content="2026-02-26T16:16:46.301Z">
 <meta property="article:author" content="DKShowMaker">
+<meta property="article:tag" content="Datasophon">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 
 
@@ -171,17 +173,17 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -247,7 +249,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-25 21:43:50" itemprop="dateModified" datetime="2026-02-25T21:43:50+08:00">2026-02-25</time>
+      <time title="Modified: 2026-02-27 00:16:46" itemprop="dateModified" datetime="2026-02-27T00:16:46+08:00">2026-02-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
     </span>
 
   
@@ -266,7 +277,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><span id="more"></span>
+    <div class="post-body" itemprop="articleBody"><p>本教程详细介绍了大数据管理平台Datasophon在aarch64架构芯片和国产操作系统麒麟V10客户端、服务器端上的安装过程。可以点击右上角获得项目更新。</p>
+<span id="more"></span>
 
 <h2 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a>硬件环境</h2><table>
 <thead>
@@ -347,7 +359,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 是否存在mysql用户组</span></span><br><span class="line">getent group | grep mysql</span><br><span class="line"><span class="comment"># 组内是否存在mysql用户</span></span><br><span class="line">getent group mysql</span><br><span class="line"><span class="comment"># 创建组</span></span><br><span class="line">groupadd mysql</span><br><span class="line"><span class="comment"># 添加用户</span></span><br><span class="line">useradd -r -g mysql mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># cd /opt/mysql</span></span><br><span class="line">vim my.cnf</span><br><span class="line"></span><br><span class="line">[mysql]</span><br><span class="line">socket=/opt/mysql/mysql.socket</span><br><span class="line">default-character-set=utf8</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">socket=/opt/mysql/mysql.socket</span><br><span class="line">port=3306</span><br><span class="line">basedir=/opt/mysql</span><br><span class="line">datadir=/opt/mysql/data</span><br><span class="line">max_connections=200</span><br><span class="line">character-set-server=utf8</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line">lower_case_table_names=1</span><br><span class="line">max_allowed_packet=16M</span><br><span class="line">explicit_defaults_for_timestamp=<span class="literal">true</span></span><br><span class="line">symbolic-links=0</span><br><span class="line">log-error=/opt/mysql/data/mysqld.err</span><br><span class="line">pid-file=/opt/mysql/data/mysqld.pid</span><br><span class="line"></span><br><span class="line">[mysql.server]</span><br><span class="line">user=mysql</span><br><span class="line">basedir=mysql</span><br><span class="line"></span><br><span class="line"><span class="built_in">chmod</span> 644 /opt/mysql/my.cnf</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>初始化</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/mysql/bin</span><br><span class="line"></span><br><span class="line">mysqld --defaults-file=/opt/mysql/my.cnf \</span><br><span class="line">--initialize \</span><br><span class="line">--user=mysql \</span><br><span class="line">--basedir=/opt/mysql \</span><br><span class="line">--datadir=/opt/mysql/data \</span><br><span class="line">--log-error=/opt/mysql/data/mysqld.err</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看生成的随机密码</span></span><br><span class="line">grep <span class="string">&#x27;temporary password&#x27;</span> /opt/mysql/data/mysqld.err</span><br><span class="line"><span class="comment"># 输入临时密码登录</span></span><br><span class="line">/opt/mysql/bin/mysql -uroot -p --socket=/opt/mysql/mysql.socket</span><br><span class="line"><span class="comment"># 更改密码</span></span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED BY <span class="string">&#x27;Mysql001!&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/mysql/bin</span><br><span class="line"></span><br><span class="line">mysqld --defaults-file=/opt/mysql/my.cnf \</span><br><span class="line">--initialize \</span><br><span class="line">--user=mysql \</span><br><span class="line">--basedir=/opt/mysql \</span><br><span class="line">--datadir=/opt/mysql/data \</span><br><span class="line">--log-error=/opt/mysql/data/mysqld.err</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看生成的随机密码</span></span><br><span class="line">grep <span class="string">&#x27;temporary password&#x27;</span> /opt/mysql/data/mysqld.err</span><br><span class="line"><span class="comment"># 输入临时密码登录</span></span><br><span class="line">/opt/mysql/bin/mysql -uroot -p --socket=/opt/mysql/mysql.socket</span><br><span class="line"><span class="comment"># 更改密码</span></span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED BY <span class="string">&#x27;Mysql001!&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参考链接 <a href="https://dkshowmaker.github.io/2026/02/26/Linux-MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#more">Linux-MySQL安装教程</a></p>
+</blockquote>
+</li>
 </ol>
 <h2 id="进行基础配置"><a href="#进行基础配置" class="headerlink" title="进行基础配置"></a>进行基础配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ubuntu 无法自动注册系统服务之后启动worker，需要手动启动worker</span></span><br><span class="line"><span class="comment"># tail -n100 -f datasophon-api.log</span></span><br><span class="line">exe cmd: systemctl <span class="built_in">enable</span> datasophon-workr</span><br><span class="line">[INFO] 2026-01-26 14:39:42 com.datasophon.api.utils.MinaUtils:[129] - mina result 1</span><br></pre></td></tr></table></figure>
 
@@ -377,6 +393,10 @@
 </ul>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+              <a href="/tags/Datasophon/" rel="tag"><i class="fa fa-tag"></i> Datasophon</a>
+          </div>
 
         
 
